@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clothing Ecommerce Website - Checkout</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <script src="https://kit.fontawesome.com/dad03e859c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Styles for the custom message box */
+            .message-box {
+                display: none; /* Hidden by default */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #088178;
+                color: #fff;
+                padding: 20px 30px;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                font-size: 18px;
+                text-align: center;
+                animation: fadeIn 0.5s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translate(-50%, -60%); }
+                to { opacity: 1; transform: translate(-50%, -50%); }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="image/logo.png" height="90px" alt="Company Logo"></a>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="cart.html" id="lg-bag">
+                            <i class="fal fa-shopping-bag"></i>
+                            <span class="quantity">0</span>
+                        </a>
+                    </li>
+                    <li><a href="#" id="close"><i class="far fa-times"></i></a></li>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html" id="lg-bag">
+                    <i class="fal fa-shopping-bag"></i>
+                    <span class="quantity">0</span>
+                </a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+
+        <section id="pageheader" class="checkout-header">
+            <h2>#checkout</h2>
+            <p>Finalize your order!</p>
+        </section>
+
+        <section id="checkout-details" class="section-p1">
+            <div class="checkout-form">
+                <h3>Shipping Information</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="abc@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" id="address1" placeholder="123 Main St" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address Line 2 (Optional)</label>
+                        <input type="text" id="address2" placeholder="Apartment, suite, unit, etc.">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Lahore" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province</label>
+                            <input type="text" id="state" placeholder="Punjab" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zip">Zip/Postal Code</label>
+                            <input type="text" id="zip" placeholder="10001" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" placeholder="Pakistan" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+923000000000" required>
+                    </div>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-table">
+                    <table>
+                        <tr>
+                            <td>Cart Subtotal</td>
+                            <td id="checkout-subtotal"></td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong id="checkout-total"></strong></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h3>Payment Method</h3>
+                <div class="payment-options">
+                    <label>
+                        <input type="radio" name="paymentMethod" value="creditCard" checked> Credit Card
+                    </label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="cashOnDelivery"> Cash on Delivery
+                    </label>
+                </div>
+
+                <button class="normal place-order-btn">Place Order</button>
+            </div>
+        </section>
+
+    <div class="message-box" id="orderMessageBox">
+        Thanks for your order!
+    </div>
+
+<section id="newsletter">
+  <div class="newstext">
+    <h4>Thanks for visiting StyleSphere</h4>
+  </div>
+</section>
+
+<footer class="section-p1">
+  
+<div class="col">
+<a href="#"><img class="logo" src="image/logo.png" height="90px"></a>
+    <h4>Contact</h4>
+     <p><strong>Address:<strong>Sheikhupura</p>
+    <p><strong>Phone:</strong>03178140441</p>
+    <p><strong>Hours:</strong>Mon - Sat</p>
+       <div class="follow">
+         <h4>Follow Us</h4>
+         <div class="icon">
+           <i class="fab fa-facebook-f"></i>
+           <i class="fab fa-instagram"></i>
+           <i class="fab fa-twitter"></i>
+           <i class="fab fa-youtube"></i>
+           <i class="fab fa-pinterest-p"></i>
+            </div>
+       </div>
+       </div>
+      
+    <div class="sec">   
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About Us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms and Condition</a>
+      <a href="#">Contact Us</a>
+   </div>
+    
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Account</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track my Order</a>
+      <a href="#">Help</a>
+        
+    </div>
+    
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+ 
+      <div class="row">
+      <img src="image/logo/app.jpg" alt="">
+      <img src="image/logo/play.jpg" alt="">
+    </div>
+    <p>Secured Payment Gateways</p>
+    <img src="image/logo/pay.png" alt="">
+       </div>
+  </div>
+  <br><br><br><br>
+  <div class="coypright">
+      <p> © 2025 All rights reserved!</p>
+    </div>
+  
+ </footer>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" xintegrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
