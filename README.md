@@ -4,7 +4,7 @@ This is a full-featured eCommerce website built to showcase and sell products on
 
 🚀 Features
 
-Shopping Cart functionality
-Checkout and Order Summary
-Admin Panel (for managing products, categories, and orders)
+Shopping Cart functionality,
+Checkout and Order Summary,
+Admin Panel (for managing products, categories, and orders),
 Responsive UI for mobile and desktop
